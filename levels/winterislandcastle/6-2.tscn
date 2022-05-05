@@ -1,0 +1,365 @@
+[gd_scene load_steps=13 format=2]
+
+[ext_resource path="res://scenes/winterislandcastle/tileset.tres" type="TileSet" id=1]
+[ext_resource path="res://scenes/winterislandcastle/BGs/mirror.png" type="Texture" id=2]
+[ext_resource path="res://scenes/winterislandcastle/BGs/wall.png" type="Texture" id=3]
+[ext_resource path="res://scenes/winterislandcastle/slopes/slope0-31.tscn" type="PackedScene" id=4]
+[ext_resource path="res://scenes/dungeon/slopes/slopea-b.tscn" type="PackedScene" id=5]
+[ext_resource path="res://scenes/winterislandcastle/slopes/slope31-0.tscn" type="PackedScene" id=6]
+[ext_resource path="res://scenes/winterislandcastle/climbableblock.tscn" type="PackedScene" id=7]
+[ext_resource path="res://scenes/dungeon/ladder/ladder.tscn" type="PackedScene" id=8]
+[ext_resource path="res://scenes/dungeon/ladder/laddertop.tscn" type="PackedScene" id=9]
+[ext_resource path="res://scenes/common/damagables/demon/demon.tscn" type="PackedScene" id=10]
+[ext_resource path="res://scenes/common/damagables/enchantedarmor/enchantedarmor.tscn" type="PackedScene" id=11]
+[ext_resource path="res://scenes/common/teleport.tscn" type="PackedScene" id=12]
+
+[node name="LVL_NOTITLE" type="Node2D" index="0"]
+
+__meta__ = {
+"__editor_plugin_screen__": "2D"
+}
+
+[node name="tilemap" type="TileMap" parent="." index="0"]
+
+mode = 0
+tile_set = ExtResource( 1 )
+cell_size = Vector2( 32, 32 )
+cell_quadrant_size = 16
+cell_custom_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+cell_half_offset = 2
+cell_tile_origin = 0
+cell_y_sort = false
+cell_clip_uv = false
+collision_use_kinematic = false
+collision_friction = 1.0
+collision_bounce = 0.0
+collision_layer = 524288
+collision_mask = 1
+occluder_light_mask = 1
+format = 1
+tile_data = PoolIntArray( -458759, 1610612737, 0, -458758, 1073741824, 0, -458757, 1073741824, 0, -458756, 1073741824, 0, -458755, 1073741824, 0, -458754, 1073741824, 0, -458753, 1073741824, 0, -524288, 1073741824, 0, -524287, 1073741824, 0, -524286, 1073741824, 0, -524285, 1073741824, 0, -524284, 1073741824, 0, -524283, 1073741824, 0, -524282, 1073741824, 0, -524281, 1073741824, 0, -524280, 1073741824, 0, -524279, 1073741824, 0, -524278, 1073741824, 0, -524277, 1073741824, 0, -524276, 1073741824, 0, -524275, 1073741824, 0, -524274, 1073741825, 0, -393223, 2, 0, -393222, 12, 0, -393218, 6, 0, -458750, 12, 0, -458746, 6, 0, -458742, 12, 0, -458738, 2, 0, -327687, 2, 0, -393202, 2, 0, -262151, 2, 0, -327666, 2, 0, -196615, 1073741825, 0, -262130, 2, 0, -131079, 7, 0, -196594, 2, 0, -65543, 7, 0, -131058, 2, 0, -7, 7, 0, -65522, 2, 0, 65529, 7, 0, 14, 2, 0, 131065, 7, 0, 131066, 6, 0, 131070, 12, 0, 65538, 6, 0, 65542, 12, 0, 65546, 6, 0, 65550, 2, 0, 196601, 536870913, 0, 196602, 0, 0, 196603, 0, 0, 196604, 21, 0, 131086, 2, 0, 262137, 2, 0, 262138, 3, 0, 262139, -1610612732, 0, 262140, 536870915, 0, 262141, 14, 0, 196622, 2, 0, 327673, 2, 0, 327674, 4, 0, 327675, 5, 0, 327676, 1073741827, 0, 327677, 536870915, 0, 327678, 14, 0, 262158, 2, 0, 393209, 2, 0, 393210, 4, 0, 393211, 5, 0, 393212, 5, 0, 393213, 1073741827, 0, 393214, 536870915, 0, 393215, 14, 0, 327694, 2, 0, 458745, 2, 0, 458746, 4, 0, 458747, 5, 0, 458748, 5, 0, 458749, 5, 0, 458750, 1073741827, 0, 458751, 536870915, 0, 393216, 14, 0, 393230, 2, 0, 524281, 2, 0, 524282, 4, 0, 524283, 5, 0, 524284, 5, 0, 524285, 5, 0, 524286, 5, 0, 524287, 1073741827, 0, 458752, 536870915, 0, 458753, 14, 0, 458766, 2, 0, 589817, 2, 0, 589818, 4, 0, 589819, 5, 0, 589820, 5, 0, 589821, 5, 0, 589822, 5, 0, 589823, 5, 0, 524288, 1073741827, 0, 524289, 536870915, 0, 524290, 14, 0, 524302, 2, 0, 655353, 2, 0, 655354, 4, 0, 655355, 5, 0, 655356, 5, 0, 655357, 5, 0, 655358, 5, 0, 655359, 5, 0, 589824, 5, 0, 589825, 1073741827, 0, 589826, 536870915, 0, 589827, 14, 0, 589830, 6, 0, 589834, 12, 0, 589838, 2, 0, 720889, 2, 0, 720890, 4, 0, 720891, 5, 0, 720892, 5, 0, 720893, 5, 0, 720894, 5, 0, 720895, 5, 0, 655360, 5, 0, 655361, 5, 0, 655362, 1073741827, 0, 655363, 536870915, 0, 655364, 14, 0, 655374, 2, 0, 786425, 2, 0, 786426, 4, 0, 786427, 5, 0, 786428, 5, 0, 786429, 5, 0, 786430, 5, 0, 786431, 5, 0, 720896, 5, 0, 720897, 5, 0, 720898, 5, 0, 720899, 1073741827, 0, 720900, 536870915, 0, 720901, 14, 0, 720910, 2, 0, 851961, 2, 0, 851962, 4, 0, 851963, 5, 0, 851964, 5, 0, 851965, 5, 0, 851966, 5, 0, 851967, 5, 0, 786432, 5, 0, 786433, 5, 0, 786434, 5, 0, 786435, 5, 0, 786436, 1073741827, 0, 786437, 536870915, 0, 786438, 14, 0, 786439, 21, 0, 786446, 2, 0, 917497, 2, 0, 917498, 1073741827, 0, 917499, -1610612732, 0, 917500, -1610612732, 0, 917501, -1610612732, 0, 917502, -1610612732, 0, 917503, -1610612732, 0, 851968, -1610612732, 0, 851969, -1610612732, 0, 851970, -1610612732, 0, 851971, -1610612732, 0, 851972, -1610612732, 0, 851973, 1610612739, 0, 851974, 5, 0, 851975, 5, 0, 851976, 2, 0, 851982, 2, 0, 983033, 1610612737, 0, 983034, 1073741824, 0, 983035, 1073741824, 0, 983036, 1073741824, 0, 983037, 1073741824, 0, 983038, 1073741824, 0, 983039, 1073741824, 0, 917504, 1073741824, 0, 917505, 1073741824, 0, 917506, 1073741824, 0, 917507, 1073741824, 0, 917508, 1073741824, 0, 917509, 1073741824, 0, 917510, 1073741824, 0, 917511, 1073741824, 0, 917512, 1073741825, 0, 917518, 2, 0, 1048569, 2, 0, 983054, 2, 0, 1114105, 2, 0, 1048590, 2, 0, 1179641, 2, 0, 1179642, 6, 0, 1179646, 12, 0, 1114114, 6, 0, 1114118, 12, 0, 1114122, 6, 0, 1114126, 2, 0, 1245177, 2, 0, 1179662, 2, 0, 1310713, 2, 0, 1245198, 2, 0, 1376249, 2, 0, 1310734, 2, 0, 1441785, 2, 0, 1376270, 2, 0, 1507321, 2, 0, 1441801, 21, 0, 1441802, 0, 0, 1441803, 0, 0, 1441804, 0, 0, 1441805, 0, 0, 1441806, 1, 0, 1572857, 2, 0, 1507336, 536870926, 0, 1507337, 3, 0, 1507338, -1610612732, 0, 1507339, -1610612732, 0, 1507340, -1610612732, 0, 1507341, 536870915, 0, 1507342, 2, 0, 1638393, 2, 0, 1572871, 536870926, 0, 1572872, 3, 0, 1572873, 1610612739, 0, 1572874, 5, 0, 1572875, 5, 0, 1572876, 5, 0, 1572877, 4, 0, 1572878, 2, 0, 1703929, 2, 0, 1703930, 12, 0, 1703934, 6, 0, 1638402, 12, 0, 1638406, 536870926, 0, 1638407, 3, 0, 1638408, 1610612739, 0, 1638409, 5, 0, 1638410, 5, 0, 1638411, 5, 0, 1638412, 5, 0, 1638413, 4, 0, 1638414, 2, 0, 1769465, 2, 0, 1703941, 536870926, 0, 1703942, 3, 0, 1703943, 1610612739, 0, 1703944, 5, 0, 1703945, 5, 0, 1703946, 5, 0, 1703947, 5, 0, 1703948, 5, 0, 1703949, 4, 0, 1703950, 2, 0, 1835001, 2, 0, 1769476, 536870926, 0, 1769477, 3, 0, 1769478, 1610612739, 0, 1769479, 5, 0, 1769480, 5, 0, 1769481, 5, 0, 1769482, 5, 0, 1769483, 5, 0, 1769484, 5, 0, 1769485, 4, 0, 1769486, 2, 0, 1900537, 2, 0, 1835011, 536870926, 0, 1835012, 3, 0, 1835013, 1610612739, 0, 1835014, 5, 0, 1835015, 5, 0, 1835016, 5, 0, 1835017, 5, 0, 1835018, 5, 0, 1835019, 5, 0, 1835020, 5, 0, 1835021, 4, 0, 1835022, 2, 0, 1966073, 2, 0, 1900546, 536870926, 0, 1900547, 3, 0, 1900548, 1610612739, 0, 1900549, 5, 0, 1900550, 5, 0, 1900551, 5, 0, 1900552, 5, 0, 1900553, 5, 0, 1900554, 5, 0, 1900555, 5, 0, 1900556, 5, 0, 1900557, 4, 0, 1900558, 2, 0, 2031609, 2, 0, 1966081, 536870926, 0, 1966082, 3, 0, 1966083, 1610612739, 0, 1966084, 5, 0, 1966085, 5, 0, 1966086, 5, 0, 1966087, 5, 0, 1966088, 5, 0, 1966089, 5, 0, 1966090, 5, 0, 1966091, 5, 0, 1966092, 5, 0, 1966093, 4, 0, 1966094, 2, 0, 2097145, 2, 0, 2031616, 536870926, 0, 2031617, 3, 0, 2031618, 1610612739, 0, 2031619, 5, 0, 2031620, 5, 0, 2031621, 5, 0, 2031622, 5, 0, 2031623, 5, 0, 2031624, 5, 0, 2031625, 5, 0, 2031626, 5, 0, 2031627, 5, 0, 2031628, 5, 0, 2031629, 4, 0, 2031630, 2, 0, 2162681, 2, 0, 2162686, 21, 0, 2162687, 536870926, 0, 2097152, 3, 0, 2097153, 1610612739, 0, 2097154, 5, 0, 2097155, 5, 0, 2097156, 5, 0, 2097157, 5, 0, 2097158, 5, 0, 2097159, 5, 0, 2097160, 5, 0, 2097161, 5, 0, 2097162, 5, 0, 2097163, 5, 0, 2097164, 5, 0, 2097165, 4, 0, 2097166, 2, 0, 2228217, 2, 0, 2228218, 6, 0, 2228221, 2, 0, 2228222, 5, 0, 2228223, 5, 0, 2162688, 1073741827, 0, 2162689, -1610612732, 0, 2162690, -1610612732, 0, 2162691, -1610612732, 0, 2162692, -1610612732, 0, 2162693, -1610612732, 0, 2162694, -1610612732, 0, 2162695, -1610612732, 0, 2162696, -1610612732, 0, 2162697, -1610612732, 0, 2162698, -1610612732, 0, 2162699, -1610612732, 0, 2162700, -1610612732, 0, 2162701, 1610612739, 0, 2162702, 2, 0, 2293753, 2, 0, 2293757, 1610612737, 0, 2293758, 1073741824, 0, 2293759, 1073741824, 0, 2228224, 1073741824, 0, 2228225, 1073741824, 0, 2228226, 1073741824, 0, 2228227, 1073741824, 0, 2228228, 1073741824, 0, 2228229, 1073741824, 0, 2228230, 1073741824, 0, 2228231, 1073741824, 0, 2228232, 1073741824, 0, 2228233, 1073741824, 0, 2228234, 1073741824, 0, 2228235, 1073741824, 0, 2228236, 1073741824, 0, 2228237, 1073741824, 0, 2228238, 1073741825, 0, 2359289, 2, 0, 2293774, 2, 0, 2424825, 2, 0, 2359310, 2, 0, 2490361, 2, 0, 2424846, 2, 0, 2555897, 2, 0, 2490382, 2, 0, 2621433, 2, 0, 2555918, 2, 0, 2686969, 2, 0, 2621454, 2, 0, 2752505, 536870913, 0, 2752506, 0, 0, 2752507, 0, 0, 2752508, 0, 0, 2752509, 0, 0, 2752510, 0, 0, 2752511, 0, 0, 2686976, 0, 0, 2686977, 1, 0, 2686978, 7, 0, 2686979, 7, 0, 2686980, 7, 0, 2686981, 536870913, 0, 2686982, 0, 0, 2686983, 0, 0, 2686984, 0, 0, 2686985, 0, 0, 2686986, 0, 0, 2686987, 0, 0, 2686988, 0, 0, 2686989, 0, 0, 2686990, 1, 0, 2818041, 2, 0, 2818042, 3, 0, 2818043, -1610612732, 0, 2818044, -1610612732, 0, 2818045, -1610612732, 0, 2818046, -1610612732, 0, 2818047, -1610612732, 0, 2752512, 536870915, 0, 2752513, 2, 0, 2752514, 7, 0, 2752515, 7, 0, 2752516, 7, 0, 2752517, 2, 0, 2752518, 3, 0, 2752519, -1610612732, 0, 2752520, -1610612732, 0, 2752521, -1610612732, 0, 2752522, -1610612732, 0, 2752523, -1610612732, 0, 2752524, -1610612732, 0, 2752525, 536870915, 0, 2752526, 2, 0, 2883577, 2, 0, 2883578, 4, 0, 2883579, 5, 0, 2883580, 5, 0, 2883581, 5, 0, 2883582, 5, 0, 2883583, 5, 0, 2818048, 4, 0, 2818049, 2, 0, 2818050, 7, 0, 2818051, 7, 0, 2818052, 7, 0, 2818053, 2, 0, 2818054, 4, 0, 2818055, 5, 0, 2818056, 5, 0, 2818057, 5, 0, 2818058, 5, 0, 2818059, 5, 0, 2818060, 5, 0, 2818061, 4, 0, 2818062, 2, 0, 2949113, 2, 0, 2949114, 4, 0, 2949115, 5, 0, 2949116, 5, 0, 2949117, 5, 0, 2949118, 5, 0, 2949119, 5, 0, 2883584, 4, 0, 2883585, 2, 0, 2883586, 7, 0, 2883587, 7, 0, 2883588, 7, 0, 2883589, 2, 0, 2883590, 4, 0, 2883591, 5, 0, 2883592, 5, 0, 2883593, 5, 0, 2883594, 5, 0, 2883595, 5, 0, 2883596, 5, 0, 2883597, 4, 0, 2883598, 2, 0, 3014649, 2, 0, 3014650, 4, 0, 3014651, 5, 0, 3014652, 5, 0, 3014653, 5, 0, 3014654, 5, 0, 3014655, 5, 0, 2949120, 4, 0, 2949121, 2, 0, 2949122, 7, 0, 2949123, 7, 0, 2949124, 7, 0, 2949125, 2, 0, 2949126, 4, 0, 2949127, 5, 0, 2949128, 5, 0, 2949129, 5, 0, 2949130, 5, 0, 2949131, 5, 0, 2949132, 5, 0, 2949133, 4, 0, 2949134, 2, 0, 3080185, 2, 0, 3080186, 1073741827, 0, 3080187, -1610612732, 0, 3080188, -1610612732, 0, 3080189, -1610612732, 0, 3080190, -1610612732, 0, 3080191, -1610612732, 0, 3014656, 1610612739, 0, 3014657, 2, 0, 3014658, 7, 0, 3014659, 7, 0, 3014660, 7, 0, 3014661, 2, 0, 3014662, 1073741827, 0, 3014663, -1610612732, 0, 3014664, -1610612732, 0, 3014665, -1610612732, 0, 3014666, -1610612732, 0, 3014667, -1610612732, 0, 3014668, -1610612732, 0, 3014669, 1610612739, 0, 3014670, 2, 0 )
+_sections_unfolded = [ "Collision" ]
+
+[node name="DecoGroup" type="Node2D" parent="tilemap" index="0"]
+
+editor/display_folded = true
+z_index = -1
+_sections_unfolded = [ "Z Index" ]
+
+[node name="Sprite" type="Sprite" parent="tilemap/DecoGroup" index="0"]
+
+position = Vector2( 0, 1184 )
+texture = ExtResource( 2 )
+
+[node name="Sprite1" type="Sprite" parent="tilemap/DecoGroup" index="1"]
+
+position = Vector2( 256, 1184 )
+texture = ExtResource( 2 )
+
+[node name="Sprite2" type="Sprite" parent="tilemap/DecoGroup" index="2"]
+
+position = Vector2( 128, 416 )
+texture = ExtResource( 2 )
+
+[node name="Sprite3" type="Sprite" parent="tilemap/DecoGroup" index="3"]
+
+position = Vector2( -128, 416 )
+texture = ExtResource( 2 )
+
+[node name="Sprite4" type="Sprite" parent="tilemap/DecoGroup" index="4"]
+
+position = Vector2( 0, 416 )
+texture = ExtResource( 3 )
+
+[node name="Sprite5" type="Sprite" parent="tilemap/DecoGroup" index="5"]
+
+position = Vector2( 128, 1184 )
+texture = ExtResource( 3 )
+
+[node name="Sprite6" type="Sprite" parent="tilemap/DecoGroup" index="6"]
+
+position = Vector2( 384, 1184 )
+texture = ExtResource( 3 )
+
+[node name="SlopeGroup" type="Node2D" parent="tilemap" index="1"]
+
+editor/display_folded = true
+
+[node name="Slope0-31" parent="tilemap/SlopeGroup" index="0" instance=ExtResource( 4 )]
+
+position = Vector2( -80, 80 )
+
+[node name="Slope0-32" parent="tilemap/SlopeGroup" index="1" instance=ExtResource( 4 )]
+
+position = Vector2( -48, 112 )
+
+[node name="Slope0-33" parent="tilemap/SlopeGroup" index="2" instance=ExtResource( 4 )]
+
+position = Vector2( -16, 144 )
+
+[node name="Slope0-34" parent="tilemap/SlopeGroup" index="3" instance=ExtResource( 4 )]
+
+position = Vector2( 16, 176 )
+
+[node name="Slope0-35" parent="tilemap/SlopeGroup" index="4" instance=ExtResource( 4 )]
+
+position = Vector2( 48, 208 )
+
+[node name="Slope0-36" parent="tilemap/SlopeGroup" index="5" instance=ExtResource( 4 )]
+
+position = Vector2( 80, 240 )
+
+[node name="Slope0-37" parent="tilemap/SlopeGroup" index="6" instance=ExtResource( 4 )]
+
+position = Vector2( 112, 272 )
+
+[node name="Slope0-38" parent="tilemap/SlopeGroup" index="7" instance=ExtResource( 4 )]
+
+position = Vector2( 144, 304 )
+
+[node name="Slope0-39" parent="tilemap/SlopeGroup" index="8" instance=ExtResource( 4 )]
+
+position = Vector2( 176, 336 )
+
+[node name="Slope0-40" parent="tilemap/SlopeGroup" index="9" instance=ExtResource( 4 )]
+
+position = Vector2( 208, 368 )
+
+[node name="TestSlopea-b" parent="tilemap/SlopeGroup" index="10" instance=ExtResource( 5 )]
+
+position = Vector2( 240, 400 )
+
+[node name="TestSlopea-b12" parent="tilemap/SlopeGroup" index="11" instance=ExtResource( 5 )]
+
+position = Vector2( 304, 720 )
+
+[node name="TestSlopea-b13" parent="tilemap/SlopeGroup" index="12" instance=ExtResource( 5 )]
+
+position = Vector2( 272, 752 )
+
+[node name="TestSlopea-b14" parent="tilemap/SlopeGroup" index="13" instance=ExtResource( 5 )]
+
+position = Vector2( 240, 784 )
+
+[node name="TestSlopea-b15" parent="tilemap/SlopeGroup" index="14" instance=ExtResource( 5 )]
+
+position = Vector2( 208, 816 )
+
+[node name="TestSlopea-b16" parent="tilemap/SlopeGroup" index="15" instance=ExtResource( 5 )]
+
+position = Vector2( 176, 848 )
+
+[node name="TestSlopea-b17" parent="tilemap/SlopeGroup" index="16" instance=ExtResource( 5 )]
+
+position = Vector2( 144, 880 )
+
+[node name="TestSlopea-b18" parent="tilemap/SlopeGroup" index="17" instance=ExtResource( 5 )]
+
+position = Vector2( 112, 912 )
+
+[node name="TestSlopea-b19" parent="tilemap/SlopeGroup" index="18" instance=ExtResource( 5 )]
+
+position = Vector2( 80, 944 )
+
+[node name="TestSlopea-b20" parent="tilemap/SlopeGroup" index="19" instance=ExtResource( 5 )]
+
+position = Vector2( 48, 976 )
+
+[node name="TestSlopea-b21" parent="tilemap/SlopeGroup" index="20" instance=ExtResource( 5 )]
+
+position = Vector2( 16, 1008 )
+
+[node name="TestSlopea-b22" parent="tilemap/SlopeGroup" index="21" instance=ExtResource( 5 )]
+
+position = Vector2( -16, 1040 )
+
+[node name="TestSlopea-b23" parent="tilemap/SlopeGroup" index="22" instance=ExtResource( 5 )]
+
+position = Vector2( -48, 1040 )
+
+[node name="TestSlopea-b1" parent="tilemap/SlopeGroup" index="23" instance=ExtResource( 5 )]
+
+position = Vector2( 208, 400 )
+
+[node name="TestSlopea-b2" parent="tilemap/SlopeGroup" index="24" instance=ExtResource( 5 )]
+
+position = Vector2( 176, 368 )
+
+[node name="TestSlopea-b3" parent="tilemap/SlopeGroup" index="25" instance=ExtResource( 5 )]
+
+position = Vector2( 144, 336 )
+
+[node name="TestSlopea-b4" parent="tilemap/SlopeGroup" index="26" instance=ExtResource( 5 )]
+
+position = Vector2( 112, 304 )
+
+[node name="TestSlopea-b5" parent="tilemap/SlopeGroup" index="27" instance=ExtResource( 5 )]
+
+position = Vector2( 80, 272 )
+
+[node name="TestSlopea-b6" parent="tilemap/SlopeGroup" index="28" instance=ExtResource( 5 )]
+
+position = Vector2( 48, 240 )
+
+[node name="TestSlopea-b7" parent="tilemap/SlopeGroup" index="29" instance=ExtResource( 5 )]
+
+position = Vector2( 16, 208 )
+
+[node name="TestSlopea-b8" parent="tilemap/SlopeGroup" index="30" instance=ExtResource( 5 )]
+
+position = Vector2( -16, 176 )
+
+[node name="TestSlopea-b9" parent="tilemap/SlopeGroup" index="31" instance=ExtResource( 5 )]
+
+position = Vector2( -48, 144 )
+
+[node name="TestSlopea-b10" parent="tilemap/SlopeGroup" index="32" instance=ExtResource( 5 )]
+
+position = Vector2( -80, 112 )
+
+[node name="TestSlopea-b11" parent="tilemap/SlopeGroup" index="33" instance=ExtResource( 5 )]
+
+position = Vector2( -112, 80 )
+
+[node name="Slope31-0" parent="tilemap/SlopeGroup" index="34" instance=ExtResource( 6 )]
+
+position = Vector2( -16, 1008 )
+
+[node name="Slope31-1" parent="tilemap/SlopeGroup" index="35" instance=ExtResource( 6 )]
+
+position = Vector2( 16, 976 )
+
+[node name="Slope31-2" parent="tilemap/SlopeGroup" index="36" instance=ExtResource( 6 )]
+
+position = Vector2( 48, 944 )
+
+[node name="Slope31-3" parent="tilemap/SlopeGroup" index="37" instance=ExtResource( 6 )]
+
+position = Vector2( 80, 912 )
+
+[node name="Slope31-4" parent="tilemap/SlopeGroup" index="38" instance=ExtResource( 6 )]
+
+position = Vector2( 112, 880 )
+
+[node name="Slope31-5" parent="tilemap/SlopeGroup" index="39" instance=ExtResource( 6 )]
+
+position = Vector2( 144, 848 )
+
+[node name="Slope31-6" parent="tilemap/SlopeGroup" index="40" instance=ExtResource( 6 )]
+
+position = Vector2( 176, 816 )
+
+[node name="Slope31-7" parent="tilemap/SlopeGroup" index="41" instance=ExtResource( 6 )]
+
+position = Vector2( 208, 784 )
+
+[node name="Slope31-8" parent="tilemap/SlopeGroup" index="42" instance=ExtResource( 6 )]
+
+position = Vector2( 240, 752 )
+
+[node name="Slope31-9" parent="tilemap/SlopeGroup" index="43" instance=ExtResource( 6 )]
+
+position = Vector2( 272, 720 )
+
+[node name="ClimbableGroup" type="Node2D" parent="tilemap" index="2"]
+
+editor/display_folded = true
+
+[node name="ClimbableBlock" parent="tilemap/ClimbableGroup" index="0" instance=ExtResource( 7 )]
+
+editor/display_folded = true
+position = Vector2( 272, 400 )
+
+[node name="Sprite" parent="tilemap/ClimbableGroup/ClimbableBlock" index="0"]
+
+flip_h = false
+
+[node name="ClimbableBlock1" parent="tilemap/ClimbableGroup" index="1" instance=ExtResource( 7 )]
+
+editor/display_folded = true
+position = Vector2( -80, 1040 )
+
+[node name="LadderGroup" type="Node2D" parent="tilemap" index="3"]
+
+editor/display_folded = true
+
+[node name="TestLadder" parent="tilemap/LadderGroup" index="0" instance=ExtResource( 8 )]
+
+editor/display_folded = true
+position = Vector2( 112, 1408 )
+
+[node name="Sprite" parent="tilemap/LadderGroup/TestLadder/KinematicBody2D" index="0"]
+
+region_rect = Rect2( 0, 0, 32, 192 )
+
+[node name="ladder" parent="tilemap/LadderGroup/TestLadder/KinematicBody2D" index="1"]
+
+scale = Vector2( 1, 6 )
+
+[node name="TestLadder 2" parent="tilemap/LadderGroup" index="1" instance=ExtResource( 9 )]
+
+position = Vector2( 112, 1296 )
+
+[node name="EnemiesGroup" type="Node2D" parent="tilemap" index="4"]
+
+[node name="Demon" parent="tilemap/EnemiesGroup" index="0" instance=ExtResource( 10 )]
+
+position = Vector2( 96, 80 )
+patrolrange = 7
+
+[node name="Demon1" parent="tilemap/EnemiesGroup" index="1" instance=ExtResource( 10 )]
+
+position = Vector2( -48, -48 )
+
+[node name="EnchantedArmor" parent="tilemap/EnemiesGroup" index="2" instance=ExtResource( 11 )]
+
+position = Vector2( 336, 640 )
+
+[node name="EnchantedArmor1" parent="tilemap/EnemiesGroup" index="3" instance=ExtResource( 11 )]
+
+position = Vector2( -64, 960 )
+
+[node name="EnchantedArmor2" parent="tilemap/EnemiesGroup" index="4" instance=ExtResource( 11 )]
+
+position = Vector2( -80, 1248 )
+
+[node name="TeleportGroup" type="Node2D" parent="tilemap" index="5"]
+
+[node name="Teleport" parent="tilemap/TeleportGroup" index="0" instance=ExtResource( 12 )]
+
+editor/display_folded = true
+position = Vector2( -240, -16 )
+target_level = "res://levels/winterislandcastle/6-1.tscn"
+teleport_to = Vector2( 1004, 80 )
+
+[node name="teleport" parent="tilemap/TeleportGroup/Teleport" index="0"]
+
+scale = Vector2( 1, 5 )
+
+[node name="Teleport1" parent="tilemap/TeleportGroup" index="1" instance=ExtResource( 12 )]
+
+editor/display_folded = true
+position = Vector2( 112, 1520 )
+is_horizontal = false
+target_level = "res://levels/winterislandcastle/6-3.tscn"
+teleport_to = Vector2( 784, 16 )
+
+[node name="teleport" parent="tilemap/TeleportGroup/Teleport1" index="0"]
+
+scale = Vector2( 3, 1 )
+
+[node name="boundaries" type="Node2D" parent="tilemap" index="6"]
+
+[node name="NW" type="Position2D" parent="tilemap/boundaries" index="0"]
+
+position = Vector2( -240, -272 )
+
+[node name="SE" type="Position2D" parent="tilemap/boundaries" index="1"]
+
+position = Vector2( 496, 1520 )
+
+
+[editable path="tilemap/ClimbableGroup/ClimbableBlock"]
+[editable path="tilemap/LadderGroup/TestLadder"]
+[editable path="tilemap/TeleportGroup/Teleport"]
+[editable path="tilemap/TeleportGroup/Teleport1"]

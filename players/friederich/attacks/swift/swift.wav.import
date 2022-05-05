@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/swift.wav-5ce5ea760a0974ab55e0aeca5f33773c.sample"
+
+[deps]
+
+source_file="res://players/friederich/attacks/swift/swift.wav"
+dest_files=[ "res://.import/swift.wav-5ce5ea760a0974ab55e0aeca5f33773c.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

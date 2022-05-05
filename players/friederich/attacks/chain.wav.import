@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/chain.wav-2b5fa193b1202daa6f542225f6b787a8.sample"
+
+[deps]
+
+source_file="res://players/friederich/attacks/chain.wav"
+dest_files=[ "res://.import/chain.wav-2b5fa193b1202daa6f542225f6b787a8.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

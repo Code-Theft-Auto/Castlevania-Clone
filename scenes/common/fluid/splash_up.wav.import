@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/splash_up.wav-553eba7ecf9c8757efe6ef37b535d87f.sample"
+
+[deps]
+
+source_file="res://scenes/common/fluid/splash_up.wav"
+dest_files=[ "res://.import/splash_up.wav-553eba7ecf9c8757efe6ef37b535d87f.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

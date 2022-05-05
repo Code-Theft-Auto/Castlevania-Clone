@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/crumble.wav-f5d03c71d2de270f387f524b9bda7c5f.sample"
+
+[deps]
+
+source_file="res://scenes/common/breakables/crumble.wav"
+dest_files=[ "res://.import/crumble.wav-f5d03c71d2de270f387f524b9bda7c5f.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/off.wav-3307e6018ad4eea5d0581afa288ff8c6.sample"
+
+[deps]
+
+source_file="res://players/magic/shield/off.wav"
+dest_files=[ "res://.import/off.wav-3307e6018ad4eea5d0581afa288ff8c6.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

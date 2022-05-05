@@ -1,0 +1,85 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://scenes/springislandcastle/tileset.tres" type="TileSet" id=1]
+[ext_resource path="res://scenes/items/potion/potionplus.tscn" type="PackedScene" id=2]
+[ext_resource path="res://scenes/items/special/styxmirror.tscn" type="PackedScene" id=3]
+[ext_resource path="res://scenes/common/teleport.tscn" type="PackedScene" id=4]
+
+[node name="LVL_NOTITLE" type="Node2D" index="0"]
+
+__meta__ = {
+"__editor_plugin_screen__": "2D"
+}
+
+[node name="tilemap" type="TileMap" parent="." index="0"]
+
+mode = 0
+tile_set = ExtResource( 1 )
+cell_size = Vector2( 32, 32 )
+cell_quadrant_size = 16
+cell_custom_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+cell_half_offset = 2
+cell_tile_origin = 0
+cell_y_sort = false
+cell_clip_uv = false
+collision_use_kinematic = false
+collision_friction = 1.0
+collision_bounce = 0.0
+collision_layer = 524288
+collision_mask = 1
+occluder_light_mask = 1
+format = 1
+tile_data = PoolIntArray( -524301, 1610612737, 0, -524300, 1073741824, 0, -524299, 1073741824, 0, -524298, 1073741824, 0, -524297, 1073741824, 0, -524296, 1073741824, 0, -524295, 1073741824, 0, -524294, 1073741824, 0, -524293, 1073741825, 0, -524292, 7, 0, -524291, 7, 0, -524290, 7, 0, -524289, 1610612737, 0, -589824, 1073741824, 0, -589823, 1073741824, 0, -589822, 1073741824, 0, -589821, 1073741824, 0, -589820, 1073741824, 0, -589819, 1073741824, 0, -589818, 1073741824, 0, -589817, 1073741824, 0, -589816, 1073741825, 0, -458765, 2, 0, -458764, 6, 0, -458760, 12, 0, -458756, 6, 0, -524288, 12, 0, -524284, 6, 0, -524280, 2, 0, -393229, 2, 0, -458744, 2, 0, -327693, 2, 0, -393208, 2, 0, -262157, 2, 0, -327672, 2, 0, -196621, 2, 0, -262136, 2, 0, -131085, 2, 0, -196600, 2, 0, -65549, 2, 0, -131064, 2, 0, -13, 2, 0, -65528, 2, 0, 65523, 2, 0, 65524, 13, 0, 65528, 6, 0, 65532, 13, 0, 0, 6, 0, 4, 13, 0, 8, 2, 0, 131059, 2, 0, 65544, 2, 0, 196595, 2, 0, 131080, 2, 0, 262131, 2, 0, 196616, 2, 0, 327667, 2, 0, 262152, 2, 0, 393203, 2, 0, 327688, 2, 0, 458739, 2, 0, 393224, 2, 0, 524275, 2, 0, 458760, 2, 0, 589811, 536870913, 0, 589812, 0, 0, 589813, 0, 0, 589814, 0, 0, 589815, 0, 0, 589816, 0, 0, 589817, 0, 0, 589818, 0, 0, 589819, 1, 0, 589820, 7, 0, 589821, 7, 0, 589822, 7, 0, 589823, 536870913, 0, 524288, 0, 0, 524289, 0, 0, 524290, 0, 0, 524291, 0, 0, 524292, 0, 0, 524293, 0, 0, 524294, 0, 0, 524295, 0, 0, 524296, 1, 0, 655347, 2, 0, 655348, 3, 0, 655349, -1610612732, 0, 655350, -1610612732, 0, 655351, -1610612732, 0, 655352, -1610612732, 0, 655353, -1610612732, 0, 655354, 536870915, 0, 655355, 2, 0, 655356, 7, 0, 655357, 7, 0, 655358, 7, 0, 655359, 2, 0, 589824, 3, 0, 589825, -1610612732, 0, 589826, -1610612732, 0, 589827, -1610612732, 0, 589828, -1610612732, 0, 589829, -1610612732, 0, 589830, -1610612732, 0, 589831, 536870915, 0, 589832, 2, 0, 720883, 2, 0, 720884, 4, 0, 720885, 5, 0, 720886, 5, 0, 720887, 5, 0, 720888, 5, 0, 720889, 5, 0, 720890, 4, 0, 720891, 2, 0, 720892, 7, 0, 720893, 7, 0, 720894, 7, 0, 720895, 2, 0, 655360, 4, 0, 655361, 5, 0, 655362, 5, 0, 655363, 5, 0, 655364, 5, 0, 655365, 5, 0, 655366, 5, 0, 655367, 4, 0, 655368, 2, 0, 786419, 2, 0, 786420, 1073741827, 0, 786421, -1610612732, 0, 786422, -1610612732, 0, 786423, -1610612732, 0, 786424, -1610612732, 0, 786425, -1610612732, 0, 786426, 1610612739, 0, 786427, 2, 0, 786428, 7, 0, 786429, 7, 0, 786430, 7, 0, 786431, 2, 0, 720896, 1073741827, 0, 720897, -1610612732, 0, 720898, -1610612732, 0, 720899, -1610612732, 0, 720900, -1610612732, 0, 720901, -1610612732, 0, 720902, -1610612732, 0, 720903, 1610612739, 0, 720904, 2, 0 )
+_sections_unfolded = [ "Collision" ]
+
+[node name="SpecialItemGroup" type="Node2D" parent="tilemap" index="0"]
+
+[node name="ITEM_POTION+" parent="tilemap/SpecialItemGroup" index="0" instance=ExtResource( 2 )]
+
+position = Vector2( -64, 112 )
+isgoal = true
+
+[node name="ITEM_STYXMIRROR" parent="tilemap/SpecialItemGroup" index="1" instance=ExtResource( 3 )]
+
+position = Vector2( -64, 112 )
+isgoal = true
+
+[node name="TeleportGroup" type="Node2D" parent="tilemap" index="1"]
+
+[node name="Teleport" parent="tilemap/TeleportGroup" index="0" instance=ExtResource( 4 )]
+
+editor/display_folded = true
+position = Vector2( -80, 400 )
+is_horizontal = false
+target_level = "res://levels/springislandcastle/0-0.tscn"
+teleport_to = Vector2( 272, -368 )
+
+[node name="teleport" parent="tilemap/TeleportGroup/Teleport" index="0"]
+
+scale = Vector2( 3, 1 )
+
+[node name="Teleport1" parent="tilemap/TeleportGroup" index="1" instance=ExtResource( 4 )]
+
+editor/display_folded = true
+position = Vector2( -80, -304 )
+is_horizontal = false
+target_level = "res://levels/springislandcastle/4-1.tscn"
+teleport_to = Vector2( -48, 1568 )
+
+[node name="teleport" parent="tilemap/TeleportGroup/Teleport1" index="0"]
+
+scale = Vector2( 3, 1 )
+
+[node name="boundaries" type="Node2D" parent="tilemap" index="2"]
+
+[node name="NW" type="Position2D" parent="tilemap/boundaries" index="0"]
+
+position = Vector2( -422, -294 )
+
+[node name="SE" type="Position2D" parent="tilemap/boundaries" index="1"]
+
+position = Vector2( 298, 394 )
+
+
+[editable path="tilemap/TeleportGroup/Teleport"]
+[editable path="tilemap/TeleportGroup/Teleport1"]

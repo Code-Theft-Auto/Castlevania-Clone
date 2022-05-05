@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/slice.wav-7be3b82dfb88917d5e2a2b1989ff1201.sample"
+
+[deps]
+
+source_file="res://players/friederich/attacks/slice/slice.wav"
+dest_files=[ "res://.import/slice.wav-7be3b82dfb88917d5e2a2b1989ff1201.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

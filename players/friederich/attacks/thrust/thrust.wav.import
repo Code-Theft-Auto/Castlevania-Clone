@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/thrust.wav-1f66f468eead7878a9ba12ad3a4126be.sample"
+
+[deps]
+
+source_file="res://players/friederich/attacks/thrust/thrust.wav"
+dest_files=[ "res://.import/thrust.wav-1f66f468eead7878a9ba12ad3a4126be.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0
